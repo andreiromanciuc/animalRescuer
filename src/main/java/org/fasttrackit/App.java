@@ -49,7 +49,7 @@ public class App
         doctorReferences.levelOfHealth = 10;
         doctorReferences.price = 50;
         doctorReferences.typeOfMedicine = "pils";
-        
+
 
 
     }
