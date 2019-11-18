@@ -1,14 +1,13 @@
 package org.fasttrackit;
 
 public class Animal {
+        String typeOfAnimal; // the user will have to choose between dog, cat, etc.
         String name;
         String color;
-        String typeOfAnimal;
         int age;
-        int healthLevel;
-        int hungryLevel;
-        int spiritLevel;
+        int healthLevel; // level 1 .. 100
+        int hungryLevel; // level 1 .. 100
+        int spiritLevel; // level 1 .. 100
         String preferredFood;
         String preferredHappyTime;
-
 }

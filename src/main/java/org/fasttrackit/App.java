@@ -3,12 +3,17 @@ package org.fasttrackit;
 
 public class App 
 {
+//    ADAUGA TIMPUL, CAT DUREAZA O LUNA DIN VIATA ANIMALULUI!!!!!
+//    INTREABA DE VARIABILA TIMPULUI SI CUM SE FOLOSESTE!!!!
+//    INTREABA DE VARIABILA LITERALS
+
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        System.out.println( "Hello, would you like to be my friend?" );
 
         Animal animalReferences = new Animal();
         animalReferences.typeOfAnimal = "Dog";
+        animalReferences.name = "Rex";
         animalReferences.age = 3;
         animalReferences.color = "black";
         animalReferences.healthLevel = 4;
@@ -24,29 +29,29 @@ public class App
         System.out.println("Spirit level: " + animalReferences.spiritLevel);
 
         Adaptor adaptorReferences = new Adaptor();
-        adaptorReferences.name = "Andrei";
+        adaptorReferences.adaptorName = "Andrei";
         adaptorReferences.money = 100;
-        System.out.println("Adaptors name: "+ adaptorReferences.name);
+        System.out.println("Adaptors name: "+ adaptorReferences.adaptorName);
         System.out.println("Adaptors amount "+ adaptorReferences.money);
 
         FoodForAnimal foodReferences = new FoodForAnimal();
-        foodReferences.name = "beef";
-        foodReferences.levelOfHungry = 10;
-        foodReferences.quantity = 1;
-        System.out.println("Dog is eating: " + foodReferences.name);
-        System.out.println("Dog's hungry level is at: " + foodReferences.levelOfHungry);
+        foodReferences.foodName = "beef";
+        foodReferences.hungryLevel = 10;
+        foodReferences.foodQuantity = 1;
+        System.out.println("Dog is eating: " + foodReferences.foodName);
+        System.out.println("Dog's hungry level is at: " + foodReferences.hungryLevel);
 
 
         Happy_time timeReferences = new Happy_time();
-        timeReferences.name = "Playing with Adaptor";
-        timeReferences.duration = 2;
-        timeReferences.typeOfHappyTime = "preferred";
-        System.out.println("Dog is " + timeReferences.name);
+        timeReferences.happyTimeName = "Playing with Adaptor";
+        timeReferences.happyTimeDuration = 2;
+        timeReferences.happyTimeType = "preferred";
+        System.out.println("Dog is " + timeReferences.happyTimeName);
 
 
         Doctor doctorReferences = new Doctor();
-        doctorReferences.name = "John";
-        doctorReferences.levelOfHealth = 10;
+        doctorReferences.doctorName = "John";
+        doctorReferences.healthLevel = 10;
         doctorReferences.price = 50;
         doctorReferences.typeOfMedicine = "pils";
 
