@@ -1,7 +1,6 @@
 package org.fasttrackit;
 
 public class Animal {
-        String typeOfAnimal; // the user will have to choose between dog, cat, etc.
         String name;
         String color;
         int age;

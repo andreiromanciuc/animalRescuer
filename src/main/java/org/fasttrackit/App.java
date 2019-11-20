@@ -1,19 +1,10 @@
 package org.fasttrackit;
 
 
-import com.sun.org.apache.xerces.internal.impl.dv.xs.DayDV;
-
-import java.time.DayOfWeek;
-import java.time.LocalDateTime;
-import java.time.Month;
-import java.time.MonthDay;
 import java.util.Date;
 
 public class App
 {
-//    ADAUGA TIMPUL, CAT DUREAZA O LUNA DIN VIATA ANIMALULUI!!!!!
-//    INTREABA DE VARIABILA TIMPULUI SI CUM SE FOLOSESTE!!!!
-//    INTREABA DE VARIABILA LITERALS
 
     public static void main( String[] args )
     {
@@ -52,7 +43,7 @@ public class App
 
 
 
-        Happy_time timeReferences = new Happy_time();
+        HappyTime timeReferences = new HappyTime();
         timeReferences.happyTimeName = "Playing with Adaptor";
         timeReferences.happyTimeDuration = 2;
         timeReferences.happyTimeType = "preferred";
