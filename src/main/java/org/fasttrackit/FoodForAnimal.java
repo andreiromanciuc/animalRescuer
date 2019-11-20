@@ -1,6 +1,10 @@
 package org.fasttrackit;
 
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Date;
+
 public class FoodForAnimal {
 
     /* normal food or desert. The animal will want the normal food if it's
@@ -14,5 +18,6 @@ public class FoodForAnimal {
     double foodStock; //will decrease when it will be administrated to animal
     int hungryLevel; // foodType var will increase different level of hungry
     int spiritLevel;
+    Date expirationDate;
 
 }

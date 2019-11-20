@@ -1,7 +1,15 @@
 package org.fasttrackit;
 
 
-public class App 
+import com.sun.org.apache.xerces.internal.impl.dv.xs.DayDV;
+
+import java.time.DayOfWeek;
+import java.time.LocalDateTime;
+import java.time.Month;
+import java.time.MonthDay;
+import java.util.Date;
+
+public class App
 {
 //    ADAUGA TIMPUL, CAT DUREAZA O LUNA DIN VIATA ANIMALULUI!!!!!
 //    INTREABA DE VARIABILA TIMPULUI SI CUM SE FOLOSESTE!!!!
@@ -38,8 +46,10 @@ public class App
         foodReferences.foodName = "beef";
         foodReferences.hungryLevel = 10;
         foodReferences.foodQuantity = 1;
+        foodReferences.expirationDate = new Date(2019,11,22);
         System.out.println("Dog is eating: " + foodReferences.foodName);
         System.out.println("Dog's hungry level is at: " + foodReferences.hungryLevel);
+
 
 
         Happy_time timeReferences = new Happy_time();
