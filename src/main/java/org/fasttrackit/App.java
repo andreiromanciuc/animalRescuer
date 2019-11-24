@@ -2,7 +2,6 @@ package org.fasttrackit;
 
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class App
 {
@@ -12,18 +11,26 @@ public class App
         System.out.println( "Hello, would you like to be my friend?" );
 
         Animal animalReferences = new Animal();
+        Dog dogAnimal = new Dog();
+        animalReferences.dogAnimal = dogAnimal;
 
-        animalReferences.age = 3;
-        animalReferences.healthLevel = 4;
-        animalReferences.hungryLevel = 2;
-        animalReferences.preferredFood = "beef";
-        animalReferences.preferredHappyTime = "To play with Adaptor";
-        animalReferences.spiritLevel = 1;
+        dogAnimal.name = "Rex";
+        animalReferences.dogAnimal.age = 3;
+        animalReferences.dogAnimal.spiritLevel = 5;
+        animalReferences.dogAnimal.hungryLevel = 4;
+        animalReferences.dogAnimal.healthLevel = 2;
+        dogAnimal.color = "Black";
+        dogAnimal.preferredFood = "Beef";
 
-        System.out.println("Age: " + animalReferences.age);
-        System.out.println("Level of Health: " + animalReferences.healthLevel);
-        System.out.println("Level of Hungry: " + animalReferences.hungryLevel);
-        System.out.println("Spirit level: " + animalReferences.spiritLevel);
+        System.out.println("Name " + dogAnimal.name);
+        System.out.println("Age " + dogAnimal.age);
+        System.out.println("Health " + dogAnimal.healthLevel);
+        System.out.println("Hungry " + dogAnimal.hungryLevel);
+
+
+
+
+
 
         Adaptor adaptorReferences = new Adaptor();
         adaptorReferences.adaptorName = "Andrei";
