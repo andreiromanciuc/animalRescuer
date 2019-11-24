@@ -13,11 +13,13 @@ public class FoodForAnimal {
 
     String foodType;
     String foodName;
-    double foodPrice;
+    int foodPrice;
     double foodQuantity; // how much food will be given to animal
     int foodStock; //will decrease when it will be administrated to animal
-    int hungryLevel; // foodType var will increase different level of hungry
-    int spiritLevel;
+    int levelOfHungry; // foodType var will increase different level of hungry
+    int levelOfSpirit;
     LocalDate expirationDate;
+
+
 
 }

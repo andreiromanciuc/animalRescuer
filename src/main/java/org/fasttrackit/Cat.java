@@ -1,7 +1,7 @@
 package org.fasttrackit;
 
 public class Cat extends Animal {
-    String name;
+    String animalNameCat;
     String color;
     String preferredHappyTime;
 }
