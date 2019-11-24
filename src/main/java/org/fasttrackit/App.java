@@ -1,6 +1,7 @@
 package org.fasttrackit;
 
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class App
@@ -11,18 +12,15 @@ public class App
         System.out.println( "Hello, would you like to be my friend?" );
 
         Animal animalReferences = new Animal();
-        animalReferences.typeOfAnimal = "Dog";
-        animalReferences.name = "Rex";
+
         animalReferences.age = 3;
-        animalReferences.color = "black";
         animalReferences.healthLevel = 4;
         animalReferences.hungryLevel = 2;
         animalReferences.preferredFood = "beef";
         animalReferences.preferredHappyTime = "To play with Adaptor";
         animalReferences.spiritLevel = 1;
-        System.out.println("Type of animal: " + animalReferences.typeOfAnimal);
+
         System.out.println("Age: " + animalReferences.age);
-        System.out.println("Color: " + animalReferences.color);
         System.out.println("Level of Health: " + animalReferences.healthLevel);
         System.out.println("Level of Hungry: " + animalReferences.hungryLevel);
         System.out.println("Spirit level: " + animalReferences.spiritLevel);
@@ -37,7 +35,7 @@ public class App
         foodReferences.foodName = "beef";
         foodReferences.hungryLevel = 10;
         foodReferences.foodQuantity = 1;
-        foodReferences.expirationDate = new Date(2019,11,22);
+        LocalDate.now().plusDays(2);
         System.out.println("Dog is eating: " + foodReferences.foodName);
         System.out.println("Dog's hungry level is at: " + foodReferences.hungryLevel);
 

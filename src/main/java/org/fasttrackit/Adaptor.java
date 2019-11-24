@@ -4,7 +4,7 @@ public class Adaptor {
     String adaptorName;
 
     //male, female
-    String gender;
+    boolean gender;
 
     // initial money for game will be 100 um., will decrease for different activities
     int money;

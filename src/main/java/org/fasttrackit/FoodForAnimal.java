@@ -18,6 +18,6 @@ public class FoodForAnimal {
     int foodStock; //will decrease when it will be administrated to animal
     int hungryLevel; // foodType var will increase different level of hungry
     int spiritLevel;
-    Date expirationDate;
+    LocalDate expirationDate;
 
 }
