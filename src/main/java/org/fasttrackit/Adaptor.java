@@ -1,7 +1,7 @@
 package org.fasttrackit;
 
 public class Adaptor {
-    String adaptorName;
+
 
     //male, female
     boolean gender;
@@ -11,4 +11,7 @@ public class Adaptor {
 
     // increase money when the animal is full healthy or if he's not hungry etc.
     int increaseMoney;
+
+    GenderFemale female;
+    GenderMale male;
 }

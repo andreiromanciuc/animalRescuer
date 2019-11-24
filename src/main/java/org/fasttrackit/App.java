@@ -29,14 +29,16 @@ public class App
 
 
 
-
-
-
         Adaptor adaptorReferences = new Adaptor();
-        adaptorReferences.adaptorName = "Andrei";
+        GenderMale male = new GenderMale();
+        adaptorReferences.male = male;
+
+        adaptorReferences.male.name = "Andrei";
+        adaptorReferences.male.age = 29;
         adaptorReferences.money = 100;
-        System.out.println("Adaptors name: "+ adaptorReferences.adaptorName);
-        System.out.println("Adaptors amount "+ adaptorReferences.money);
+        System.out.println("Adaptors name: "+ adaptorReferences.male.name);
+        System.out.println("The age of the adapter "+ adaptorReferences.male.age);
+        System.out.println("The money which adaptor have for the start "+ adaptorReferences.money + "$");
 
         FoodForAnimal foodReferences = new FoodForAnimal();
         foodReferences.foodName = "beef";
