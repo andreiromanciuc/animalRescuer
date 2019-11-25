@@ -21,6 +21,7 @@ public class App
         dogAnimal.setColor("Black");
         dogAnimal.setPreferredFood("Beef");
 
+        
         System.out.println("Name " + dogAnimal.getAnimalNameDog());
         System.out.println("Age " + dogAnimal.getAge());
         System.out.println("Health " + dogAnimal.getHealthLevel());
