@@ -18,4 +18,12 @@ public void time(Dog timeAnimal, HappyTime timeHappy){
     newSpiritLevel = timeAnimal.spiritLevel + 3;
     System.out.println(timeAnimal.spiritLevel + " grew with "+ newSpiritLevel + " points.");
 }
+
+    public GenderMale(String name) {
+        this.name = name;
+    }
+
+    public GenderMale(int age) {
+        this.age = age;
+    }
 }

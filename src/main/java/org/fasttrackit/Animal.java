@@ -9,4 +9,9 @@ public class Animal {
         Dog dogAnimal;
         Cat catAnimal;
 
+        public Animal(int age) {
+                this.age = age;
+        }
+
+
 }

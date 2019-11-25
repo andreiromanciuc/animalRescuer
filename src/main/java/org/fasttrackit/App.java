@@ -11,11 +11,9 @@ public class App
     {
         System.out.println( "Hello, would you like to be my friend?" );
 
-        Animal animalReferences = new Animal();
-        Dog dogAnimal = new Dog();
+        Animal animalReferences = new Animal(3);
+        Dog dogAnimal = new Dog(3);
         animalReferences.dogAnimal = dogAnimal;
-        animalReferences.dogAnimal.animalNameDog = "Rex";
-        animalReferences.dogAnimal.age = 3;
         animalReferences.dogAnimal.spiritLevel = 5;
         animalReferences.dogAnimal.hungryLevel = 3;
         animalReferences.dogAnimal.healthLevel = 2;
@@ -28,7 +26,7 @@ public class App
         System.out.println("Hungry " + dogAnimal.hungryLevel);
 
         Adaptor adaptorReferences = new Adaptor();
-        GenderMale male = new GenderMale();
+        GenderMale male = new GenderMale(29);
 
         adaptorReferences.male = male;
 

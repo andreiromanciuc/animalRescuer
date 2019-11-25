@@ -7,4 +7,7 @@ public class Dog extends Animal {
     String color;
     String preferredFood;
 
+    public Dog(int age) {
+        super(age);
+    }
 }

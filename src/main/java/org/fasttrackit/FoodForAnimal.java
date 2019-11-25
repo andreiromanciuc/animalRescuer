@@ -20,6 +20,7 @@ public class FoodForAnimal {
     int levelOfSpirit;
     LocalDate expirationDate;
 
-
-
+    public FoodForAnimal(String foodType) {
+        this.foodType = foodType;
+    }
 }

@@ -15,5 +15,4 @@ public class Adaptor {
     GenderFemale female;
     GenderMale male;
 
-
 }
