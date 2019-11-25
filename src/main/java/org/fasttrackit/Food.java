@@ -5,14 +5,13 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Date;
 
-public class FoodForAnimal {
+public class Food {
 
     /* normal food or desert. The animal will want the normal food if it's
-    hungry level will decrease lower than 60 points, in rest he will want deserts which will increase his
+    hungry level will decrease lower than 5 points, in rest he will want deserts which will increase his
     spiritLevel but not so much hungryLevel */
 
     private String foodType;
-    private String foodName;
     private int foodPrice;
     private double foodQuantity; // how much food will be given to animal
     private int foodStock; //will decrease when it will be administrated to animal
@@ -23,9 +22,7 @@ public class FoodForAnimal {
     CookieFood cookieFood;
     BasicFood basicFood;
 
-    public FoodForAnimal(String foodName) {
-        this.foodName = foodName;
-    }
+
 
     public String getFoodType() {
         return foodType;
@@ -33,14 +30,6 @@ public class FoodForAnimal {
 
     public void setFoodType(String foodType) {
         this.foodType = foodType;
-    }
-
-    public String getFoodName() {
-        return foodName;
-    }
-
-    public void setFoodName(String foodName) {
-        this.foodName = foodName;
     }
 
     public int getFoodPrice() {

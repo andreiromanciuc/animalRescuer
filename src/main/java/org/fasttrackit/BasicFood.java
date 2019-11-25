@@ -1,11 +1,9 @@
 package org.fasttrackit;
 
-public class BasicFood extends FoodForAnimal{
+public class BasicFood extends Food {
     private static String normalFood = "basic food";
 
-    public BasicFood(String foodName) {
-        super(foodName);
-    }
+
 
     public static String getNormalFood() {
         return normalFood;
