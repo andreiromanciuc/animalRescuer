@@ -14,35 +14,35 @@ public class App
         Animal animalReferences = new Animal(3);
         Dog dogAnimal = new Dog(3);
         animalReferences.dogAnimal = dogAnimal;
-        animalReferences.dogAnimal.spiritLevel = 5;
-        animalReferences.dogAnimal.hungryLevel = 3;
-        animalReferences.dogAnimal.healthLevel = 2;
-        dogAnimal.color = "Black";
-        dogAnimal.preferredFood = "Beef";
+        animalReferences.dogAnimal.setAnimalNameDog("Rex");
+        animalReferences.dogAnimal.setSpiritLevel(2);
+        animalReferences.dogAnimal.setHungryLevel(4);
+        animalReferences.dogAnimal.setHealthLevel(3);
+        dogAnimal.setColor("Black");
+        dogAnimal.setPreferredFood("Beef");
 
-        System.out.println("Name " + dogAnimal.animalNameDog);
-        System.out.println("Age " + dogAnimal.age);
-        System.out.println("Health " + dogAnimal.healthLevel);
-        System.out.println("Hungry " + dogAnimal.hungryLevel);
+        System.out.println("Name " + dogAnimal.getAnimalNameDog());
+        System.out.println("Age " + dogAnimal.getAge());
+        System.out.println("Health " + dogAnimal.getHealthLevel());
+        System.out.println("Hungry " + dogAnimal.getHungryLevel());
 
         Adaptor adaptorReferences = new Adaptor();
         GenderMale male = new GenderMale(29);
 
         adaptorReferences.male = male;
 
-        adaptorReferences.male.name = "Andrei";
-        adaptorReferences.male.age = 29;
-        adaptorReferences.money = 100;
-        System.out.println("Adaptors name: "+ adaptorReferences.male.name);
-        System.out.println("The age of the adapter "+ adaptorReferences.male.age);
-        System.out.println("The money which adaptor have for the start "+ adaptorReferences.money + "$");
+        adaptorReferences.male.setName("Andrei");
+        adaptorReferences.male.setAge(29);
+        adaptorReferences.setMoney(100);
+        System.out.println("Adaptors name: "+ adaptorReferences.male.getName());
+        System.out.println("The age of the adapter "+ adaptorReferences.male.getName());
+        System.out.println("The money which adaptor have for the start "+ adaptorReferences.getMoney() + "$");
 
-       FoodForAnimal foodReferences = new FoodForAnimal();
-       foodReferences.foodName = "Beef";
+       FoodForAnimal foodReferences = new FoodForAnimal("desert");
+       foodReferences.setFoodName("Cookie");
 
        HappyTime timeReferences = new HappyTime();
-       timeReferences.happyTimeName = "playing";
-
+       timeReferences.setHappyTimeName("playing");
 
 
 
