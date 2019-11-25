@@ -2,9 +2,8 @@ package org.fasttrackit;
 
 public class Adaptor {
 
-
-    //male, female
-    private boolean gender;
+    private String name;
+    private int age;
 
     // initial money for game will be 100 um., will decrease for different activities
     private int money;
@@ -12,16 +11,29 @@ public class Adaptor {
     // increase money when the animal is full healthy or if he's not hungry etc.
     private int increaseMoney;
 
-    GenderFemale female;
-    GenderMale male;
 
-    public boolean isGender() {
-        return gender;
+
+    public Adaptor(String name, int age) {
+        this.name = name;
+        this.age = age;
     }
 
-    public void setGender(boolean gender) {
-        this.gender = gender;
+    public String getName() {
+        return name;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
 
     public int getMoney() {
         return money;

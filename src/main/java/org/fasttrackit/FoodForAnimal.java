@@ -16,14 +16,16 @@ public class FoodForAnimal {
     private int foodPrice;
     private double foodQuantity; // how much food will be given to animal
     private int foodStock; //will decrease when it will be administrated to animal
-    private int levelOfHungry; // foodType var will increase different level of hungry
-    private int levelOfSpirit;
+    private int calories; // foodType var will increase different level of hungry
+
     private LocalDate expirationDate;
 
-    public FoodForAnimal(String foodType) {
-        this.foodType = foodType;
-    }
+    CookieFood cookieFood;
+    BasicFood basicFood;
 
+    public FoodForAnimal(String foodName) {
+        this.foodName = foodName;
+    }
 
     public String getFoodType() {
         return foodType;
@@ -65,27 +67,19 @@ public class FoodForAnimal {
         this.foodStock = foodStock;
     }
 
-    public int getLevelOfHungry() {
-        return levelOfHungry;
-    }
-
-    public void setLevelOfHungry(int levelOfHungry) {
-        this.levelOfHungry = levelOfHungry;
-    }
-
-    public int getLevelOfSpirit() {
-        return levelOfSpirit;
-    }
-
-    public void setLevelOfSpirit(int levelOfSpirit) {
-        this.levelOfSpirit = levelOfSpirit;
-    }
-
     public LocalDate getExpirationDate() {
         return expirationDate;
     }
 
     public void setExpirationDate(LocalDate expirationDate) {
         this.expirationDate = expirationDate;
+    }
+
+    public int getCalories() {
+        return calories;
+    }
+
+    public void setCalories(int calories) {
+        this.calories = calories;
     }
 }

@@ -4,7 +4,8 @@ public class HappyTime {
     private String happyTimeType; // if it's preferred happy time, the spiritLevel will increase more
     private String happyTimeName; //playing with adaptor, walking, playing toy (different type of toys)
     private String toy;
-    private int happyTimeDuration; // if user will select one of the happyTimeType, it will have different duration time
+    private int happyTimeDuration; // if user will select one of the happyTimeType, it will have different
+    // duration time
 
     public String getHappyTimeType() {
         return happyTimeType;
