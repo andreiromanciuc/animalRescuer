@@ -13,7 +13,7 @@ public class App
         System.out.println("Hello "+ adaptor.getName() + ". Welcome to our game!");
 
 
-        System.out.println("Please, present your pet");
+        System.out.println("Who is your pet?");
 
         System.out.println("This is a dog named "+animal.getNameAnimal()+". He have "+ animal.getAgeAnimal()
                 +" years old and his color is "+animal.getColor()+".");
