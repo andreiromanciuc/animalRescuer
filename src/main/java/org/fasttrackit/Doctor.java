@@ -14,7 +14,7 @@ public class Doctor {
     animal level*/
     int healthLevel;
 
-    Syringe syringe;
+
 
     public Doctor(String doctorName) {
         this.doctorName = doctorName;

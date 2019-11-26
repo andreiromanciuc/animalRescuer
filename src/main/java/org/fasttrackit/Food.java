@@ -10,7 +10,7 @@ public class Food {
     /* normal food or desert. The animal will want the normal food if it's
     hungry level will decrease lower than 5 points, in rest he will want deserts which will increase his
     spiritLevel but not so much hungryLevel */
-
+    private String foodName;
     private String foodType;
     private int foodPrice;
     private double foodQuantity; // how much food will be given to animal
@@ -23,6 +23,13 @@ public class Food {
     BasicFood basicFood;
 
 
+    public String getFoodName() {
+        return foodName;
+    }
+
+    public void setFoodName(String foodName) {
+        this.foodName = foodName;
+    }
 
     public String getFoodType() {
         return foodType;

@@ -1,17 +1,17 @@
 package org.fasttrackit;
 
 public class House {
-    private String name;
+    private String houseName;
     private int comfort; // de la 1 .. 10
 
 
 
-    public String getName() {
-        return name;
+    public String getHouseName() {
+        return houseName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setHouseName(String houseName) {
+        this.houseName = houseName;
     }
 
     public int getComfort() {

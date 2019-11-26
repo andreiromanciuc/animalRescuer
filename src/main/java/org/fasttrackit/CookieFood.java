@@ -1,15 +1,13 @@
 package org.fasttrackit;
 
 public class CookieFood extends Food {
-    private static String cookie = "cookie";
+    private  String cookie;
 
-
-
-    public static String getCookie() {
+    public String getCookie() {
         return cookie;
     }
 
-    public static void setCookie(String cookie) {
-        CookieFood.cookie = cookie;
+    public void setCookie(String cookie) {
+        this.cookie = cookie;
     }
 }

@@ -23,12 +23,12 @@ public class App
 
         Food food = new Food();
         HappyTime time = new HappyTime();
+        time.setHappyTimeName("walked");
+        CookieFood cookieFood = new CookieFood();
+        cookieFood.setFoodName("cookies");
 
-        adaptor.feed(food.cookieFood, animal.getNameAnimal(), 7);
-        adaptor.walk(time.getHappyTimeName(), animal.getNameAnimal(), 2);
-
-
-
+        adaptor.feedAnimal(cookieFood, animal,7);
+        adaptor.walk(time, animal, 3);
 
 
 
