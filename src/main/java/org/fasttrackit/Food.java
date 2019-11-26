@@ -18,9 +18,7 @@ public class Food {
     private int calories; // foodType var will increase different level of hungry
 
     private LocalDate expirationDate;
-
-    CookieFood cookieFood;
-    BasicFood basicFood;
+    
 
 
     public String getFoodName() {

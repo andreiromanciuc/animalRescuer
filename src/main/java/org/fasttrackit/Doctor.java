@@ -14,7 +14,16 @@ public class Doctor {
     animal level*/
     int healthLevel;
 
+    Pill pill;
+    Syringe syringe;
 
+    public Doctor(Syringe syringe) {
+        this.syringe = syringe;
+    }
+
+    public Doctor(Pill pill) {
+        this.pill = pill;
+    }
 
     public Doctor(String doctorName) {
         this.doctorName = doctorName;
