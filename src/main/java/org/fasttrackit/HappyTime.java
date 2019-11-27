@@ -1,41 +1,32 @@
 package org.fasttrackit;
 
 public class HappyTime {
-    private String happyTimeType; // if it's preferred happy time, the spiritLevel will increase more
-    private String happyTimeName; //playing with adaptor, walking, playing toy (different type of toys)
-    private String toy;
-    private int happyTimeDuration; // if user will select one of the happyTimeType, it will have different
+    private String type; // if it's preferred happy time, the spiritLevel will increase more
+    private String name; //playing with adaptor, walking, playing toy (different type of toys)
+    private int duration; // if user will select one of the happyTimeType, it will have different
     // duration time
 
-    public String getHappyTimeType() {
-        return happyTimeType;
+    public String getType() {
+        return type;
     }
 
-    public void setHappyTimeType(String happyTimeType) {
-        this.happyTimeType = happyTimeType;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public String getHappyTimeName() {
-        return happyTimeName;
+    public String getName() {
+        return name;
     }
 
-    public void setHappyTimeName(String happyTimeName) {
-        this.happyTimeName = happyTimeName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getToy() {
-        return toy;
+    public int getDuration() {
+        return duration;
     }
 
-    public void setToy(String toy) {
-        this.toy = toy;
-    }
-
-    public int getHappyTimeDuration() {
-        return happyTimeDuration;
-    }
-
-    public void setHappyTimeDuration(int happyTimeDuration) {
-        this.happyTimeDuration = happyTimeDuration;
+    public void setDuration(int duration) {
+        this.duration = duration;
     }
 }

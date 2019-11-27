@@ -1,30 +1,40 @@
 package org.fasttrackit;
 
 public class Animal {
-        private String nameAnimal;
-        private int ageAnimal;
+        private String name;
+        private int age;
         private int healthLevel; // level 1 .. 10
         private int hungryLevel; // level 1 .. 10
         private int spiritLevel; // level 1 .. 10
         private String color;
-        private String preferredFood;
+        private String favoriteFood;
+        private String favoriteTime;
+
+        public String getFavoriteTime() {
+                return favoriteTime;
+        }
+
+        public void setFavoriteTime(String favoriteTime) {
+                this.favoriteTime = favoriteTime;
+        }
+
         private int sleepingTime; // measured in min 1-10. Due this increase healthLevel and decrease hungryLevel
 
 
 
 
         public Animal(String nameAnimal, int ageAnimal, String color) {
-                this.nameAnimal = nameAnimal;
-                this.ageAnimal = ageAnimal;
+                this.name = nameAnimal;
+                this.age = ageAnimal;
                 this.color = color;
         }
 
-        public String getNameAnimal() {
-                return nameAnimal;
+        public String getName() {
+                return name;
         }
 
-        public void setNameAnimal(String nameAnimal) {
-                this.nameAnimal = nameAnimal;
+        public void setName(String name) {
+                this.name = name;
         }
 
         public String getColor() {
@@ -35,20 +45,20 @@ public class Animal {
                 this.color = color;
         }
 
-        public String getPreferredFood() {
-                return preferredFood;
+        public String getFavoriteFood() {
+                return favoriteFood;
         }
 
-        public void setPreferredFood(String preferredFood) {
-                this.preferredFood = preferredFood;
+        public void setFavoriteFood(String favoriteFood) {
+                this.favoriteFood = favoriteFood;
         }
 
-        public int getAgeAnimal() {
-                return ageAnimal;
+        public int getAge() {
+                return age;
         }
 
-        public void setAgeAnimal(int ageAnimal) {
-                this.ageAnimal = ageAnimal;
+        public void setAge(int age) {
+                this.age = age;
         }
 
         public int getHealthLevel() {

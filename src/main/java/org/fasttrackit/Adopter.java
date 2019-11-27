@@ -1,6 +1,6 @@
 package org.fasttrackit;
 
-public class Adaptor {
+public class Adopter {
 
     private String name;
     private int age;
@@ -11,25 +11,26 @@ public class Adaptor {
     // increase money when the animal is full healthy or if he's not hungry etc.
     private int increaseMoney;
 
-public void feedAnimal(CookieFood cookie, Animal animal, int hungryLevel){
+public void feedAnimal(CookieFood cookie, Animal animal){
 
-    System.out.println(getName() +" just gave some "+ cookie.getFoodName() + " food to "+ animal.getNameAnimal());
-
-    hungryLevel -= 4;
-    System.out.println("Hungry level decrease to: "+hungryLevel);
-
-}
-
-public void walk(HappyTime time, Animal animal, int spirit){
-    System.out.println(getName() +" just "+ time.getHappyTimeName() + " with "+ animal.getNameAnimal());
-    spirit += 3;
-    System.out.println("Spirit level increase to: "+spirit);
+    System.out.println(getName() +" just gave some "+ cookie.getName() + " food to "+ animal.getName());
+    System.out.println("Hungry level is at: "+ animal.getHungryLevel());
+    animal.setHungryLevel(animal.getHungryLevel()-1);
+    System.out.println("Hungry level decrease to: "+animal.getHungryLevel());
 
 }
 
+public void walk(HappyTime time, Animal animal){
+    System.out.println(getName() +" just "+ time.getName() + " with "+ animal.getName());
+    System.out.println("Spirit level is at: "+ animal.getSpiritLevel());
+    animal.setSpiritLevel(animal.getSpiritLevel()+1);
+    System.out.println("Spirit level increase to: "+animal.getSpiritLevel());
+
+}
 
 
-    public Adaptor(String name, int age) {
+
+    public Adopter(String name, int age) {
         this.name = name;
         this.age = age;
     }

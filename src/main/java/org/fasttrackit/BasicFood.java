@@ -1,15 +1,16 @@
 package org.fasttrackit;
 
 public class BasicFood extends Food {
-    private static String normalFood = "basic food";
+    private  String normalFood;
 
-
-
-    public static String getNormalFood() {
+    public String getNormalFood() {
         return normalFood;
     }
 
-    public static void setNormalFood(String normalFood) {
-        BasicFood.normalFood = normalFood;
+    public void setNormalFood(String normalFood) {
+        this.normalFood = normalFood;
     }
 }
+
+
+

@@ -2,63 +2,61 @@ package org.fasttrackit;
 
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.Date;
 
 public class Food {
 
     /* normal food or desert. The animal will want the normal food if it's
     hungry level will decrease lower than 5 points, in rest he will want deserts which will increase his
     spiritLevel but not so much hungryLevel */
-    private String foodName;
-    private String foodType;
-    private int foodPrice;
-    private double foodQuantity; // how much food will be given to animal
-    private int foodStock; //will decrease when it will be administrated to animal
+    private String name;
+    private String type;
+    private int price;
+    private double quantity; // how much food will be given to animal
+    private int stock; //will decrease when it will be administrated to animal
     private int calories; // foodType var will increase different level of hungry
 
     private LocalDate expirationDate;
-    
 
 
-    public String getFoodName() {
-        return foodName;
+
+    public String getName() {
+        return name;
     }
 
-    public void setFoodName(String foodName) {
-        this.foodName = foodName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getFoodType() {
-        return foodType;
+    public String getType() {
+        return type;
     }
 
-    public void setFoodType(String foodType) {
-        this.foodType = foodType;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public int getFoodPrice() {
-        return foodPrice;
+    public int getPrice() {
+        return price;
     }
 
-    public void setFoodPrice(int foodPrice) {
-        this.foodPrice = foodPrice;
+    public void setPrice(int price) {
+        this.price = price;
     }
 
-    public double getFoodQuantity() {
-        return foodQuantity;
+    public double getQuantity() {
+        return quantity;
     }
 
-    public void setFoodQuantity(double foodQuantity) {
-        this.foodQuantity = foodQuantity;
+    public void setQuantity(double quantity) {
+        this.quantity = quantity;
     }
 
-    public int getFoodStock() {
-        return foodStock;
+    public int getStock() {
+        return stock;
     }
 
-    public void setFoodStock(int foodStock) {
-        this.foodStock = foodStock;
+    public void setStock(int stock) {
+        this.stock = stock;
     }
 
     public LocalDate getExpirationDate() {

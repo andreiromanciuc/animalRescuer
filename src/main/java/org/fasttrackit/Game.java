@@ -2,7 +2,7 @@ package org.fasttrackit;
 
 public class Game {
 
-    Adaptor adaptor;
+    Adopter adaptor;
     Animal dog;
     Doctor doctor;
     
