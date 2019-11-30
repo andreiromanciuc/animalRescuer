@@ -12,12 +12,15 @@ public class Food {
     private String type;
     private int price;
     private double quantity; // how much food will be given to animal
-    private int stock; //will decrease when it will be administrated to animal
-    private int calories; // foodType var will increase different level of hungry
+    private int stockCookie;//will decrease when it will be administrated to animal
+    private int stockFood;
 
+
+
+    private int calories; // foodType var will increase different level of hungry
     private LocalDate expirationDate;
 
-
+    CookieFood cookieFood;
 
     public String getName() {
         return name;
@@ -51,13 +54,7 @@ public class Food {
         this.quantity = quantity;
     }
 
-    public int getStock() {
-        return stock;
-    }
 
-    public void setStock(int stock) {
-        this.stock = stock;
-    }
 
     public LocalDate getExpirationDate() {
         return expirationDate;
@@ -73,5 +70,20 @@ public class Food {
 
     public void setCalories(int calories) {
         this.calories = calories;
+    }
+    public int getStockCookie() {
+        return stockCookie;
+    }
+
+    public void setStockCookie(int stockCookie) {
+        this.stockCookie = stockCookie;
+    }
+
+    public int getStockFood() {
+        return stockFood;
+    }
+
+    public void setStockFood(int stockFood) {
+        this.stockFood = stockFood;
     }
 }

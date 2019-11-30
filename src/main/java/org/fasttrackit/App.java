@@ -9,7 +9,7 @@ public class App
     public static void main( String[] args )
     {
         Animal animal = new Animal("Rex", 3, "black");
-        Adopter adaptor = new Adopter("Andrei", 29);
+        Rescuer adaptor = new Rescuer("Andrei", 29);
         System.out.println("Hello "+ adaptor.getName() + ". Welcome to our game!");
 
 
@@ -21,13 +21,20 @@ public class App
         animal.setHealthLevel(4);
         animal.setSpiritLevel(2);
 
-        Food food = new Food();
-        HappyTime time = new HappyTime();
-        time.setName("walked");
-        CookieFood cookieFood = new CookieFood();
-        cookieFood.setName("cookies");
 
-        adaptor.feedAnimal(cookieFood, animal);
+
+        Food food = new Food();
+        food.setName("cookie");
+        food.setStockCookie(5);
+
+
+
+
+        HappyTime time = new HappyTime();
+        time.setName("play");
+
+
+        adaptor.feedAnimal(food, animal);
         adaptor.walk(time, animal);
 
 
