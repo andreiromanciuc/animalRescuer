@@ -55,7 +55,10 @@ public void walk(HappyTime time, Animal animal){
         this.age = age;
     }
 
-
+    public Rescuer() {
+    this.setName(name);
+    this.setAge(age);
+    }
 
     public String getName() {
         return name;

@@ -8,8 +8,9 @@ public class App
 
     public static void main( String[] args )
     {
-        Animal animal = new Animal("Rex", 3, "black");
+        Animal animal = new Animal("Rex");
         Rescuer adaptor = new Rescuer("Andrei", 29);
+
         System.out.println("Hello "+ adaptor.getName() + ". Welcome to our game!");
 
 
@@ -19,7 +20,7 @@ public class App
                 +" years old and his color is "+animal.getColor()+".");
         animal.setHungryLevel(7);
         animal.setHealthLevel(4);
-        animal.setSpiritLevel(2);
+        animal.setSpiritLevel(5);
 
 
 
@@ -36,6 +37,13 @@ public class App
 
         adaptor.feedAnimal(food, animal);
         adaptor.walk(time, animal);
+        animal.highSpirit();
+
+        Dog dog = new Dog();
+
+        System.out.println(dog.toString());
+
+
 
 
 
