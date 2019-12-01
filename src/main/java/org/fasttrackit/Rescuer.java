@@ -23,6 +23,9 @@ public void feedAnimal(Food food, Animal animal){
 
         System.out.println(getName() + " just gave to " + animal.getName() + " some " + food.getName());
         animal.setSpiritLevel(animal.getSpiritLevel()+1);
+        if (animal.getSpiritLevel() > 10){
+            animal.setSpiritLevel(10);
+        }
         System.out.println("Spirit level has increase by one. Now it's: "+ animal.getSpiritLevel());
         food.setStockCookie(food.getStockCookie()-1);
         System.out.println("Stock of cookies has decrease by one. Now it's: "+food.getStockCookie());
@@ -40,6 +43,9 @@ public void walk(HappyTime time, Animal animal){
     if (time.getName() == animal.getFavoriteTime()) {
         System.out.println(getName() + " just " + time.getName() + " with "+animal.getName());
         animal.setSpiritLevel(animal.getSpiritLevel()+2);
+        if (animal.getSpiritLevel() > 10){
+            animal.setSpiritLevel(10);
+        }
         System.out.println("Spirit level increase by 2. Now it's: "+animal.getSpiritLevel());
     }else {
         System.out.println(getName() + " just " + time.getName() + " with " + animal.getName());

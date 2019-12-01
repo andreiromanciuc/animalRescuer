@@ -21,9 +21,17 @@ public class Animal {
         }
 
         public void highSpirit (){
-                if (spiritLevel > 6){
-                        System.out.println("Your Animal is happy.");
+                if (spiritLevel <= 4){
+                        System.out.println("Your animal isn't happy.");
+
+                } else if ( 4 < spiritLevel && spiritLevel <= 6){
+                        System.out.println("Your animal is ok.");
+
+                } else if ( spiritLevel > 6){
+                        System.out.println("Your animal is happy");
+
                 }
+
         }
 
 
@@ -102,19 +110,5 @@ public class Animal {
                 this.sleepingTime = sleepingTime;
         }
 
-        @Override
-        public String toString() {
-                return "Animal{" +
-                        "name='" + name + '\'' +
-                        ", age=" + age +
-                        ", healthLevel=" + healthLevel +
-                        ", hungryLevel=" + hungryLevel +
-                        ", spiritLevel=" + spiritLevel +
-                        ", color='" + color + '\'' +
-                        ", favoriteFood='" + favoriteFood + '\'' +
-                        ", favoriteTime='" + favoriteTime + '\'' +
-                        ", sleepingTime=" + sleepingTime +
-                        ", favoriteHappyTime=" + favoriteHappyTime +
-                        '}';
-        }
+
 }
