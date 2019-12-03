@@ -19,7 +19,7 @@ public class Rescuer {
 public void feedAnimal(Food food, Animal animal){
 
 
-    if (food.getName() == food.cookieFood.getCookie()){
+    if (food.getName().equals(food.cookieFood.getCookie())){
 
         System.out.println(getName() + " just gave to " + animal.getName() + " some " + food.getName());
         animal.setSpiritLevel(animal.getSpiritLevel()+1);

@@ -3,8 +3,8 @@ package org.fasttrackit;
 public class Dog extends Animal {
 
 
-    public void highSpirit(){
-        System.out.println("Rex wags his tail");
+    public void highSpirit(Animal animal){
+        System.out.println(animal.getName()+" wags his tail");
     }
 
     public Dog(String name) {
