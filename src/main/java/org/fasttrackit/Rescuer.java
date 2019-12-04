@@ -40,7 +40,7 @@ public void feedAnimal(Food food, Animal animal){
 
 public void walk(HappyTime time, Animal animal){
 
-    if (time.getName() == animal.getFavoriteTime()) {
+    if (time.getName().equals(animal.getFavoriteTime())) {
         System.out.println(getName() + " just " + time.getName() + " with "+animal.getName());
         animal.setSpiritLevel(animal.getSpiritLevel()+2);
         if (animal.getSpiritLevel() > 10){
