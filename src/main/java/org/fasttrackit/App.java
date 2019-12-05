@@ -20,7 +20,7 @@ public class App
                 +" years old and his color is "+animal.getColor()+".");
         animal.setHungryLevel(7);
         animal.setHealthLevel(4);
-        animal.setSpiritLevel(9);
+        animal.setSpiritLevel(5);
 
 
 
@@ -34,13 +34,11 @@ public class App
         HappyTime time = new HappyTime();
         time.setName("play");
 
-        Dog dog = new Dog();
+        Animal dog = new Dog();
         adaptor.feedAnimal(food, animal);
         adaptor.walk(time, animal);
         animal.highSpirit();
         dog.highSpirit();
-
-
 
 
 

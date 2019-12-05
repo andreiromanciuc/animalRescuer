@@ -21,9 +21,8 @@ public class Animal {
                 } else if ( 4 < spiritLevel && spiritLevel <= 6){
                         System.out.println("Your animal is ok.");
 
-                } else if ( spiritLevel > 6){
+                } else if ( spiritLevel > 6) {
                         System.out.println("Your animal is happy");
-
                 }
 
         }
