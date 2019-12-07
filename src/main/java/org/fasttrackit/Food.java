@@ -86,4 +86,19 @@ public class Food {
     public void setStockFood(int stockFood) {
         this.stockFood = stockFood;
     }
+
+    @Override
+    public String toString() {
+        return "Food{" +
+                "name='" + name + '\'' +
+                ", type='" + type + '\'' +
+                ", price=" + price +
+                ", quantity=" + quantity +
+                ", stockCookie=" + stockCookie +
+                ", stockFood=" + stockFood +
+                ", calories=" + calories +
+                ", expirationDate=" + expirationDate +
+                ", cookieFood=" + cookieFood +
+                '}';
+    }
 }

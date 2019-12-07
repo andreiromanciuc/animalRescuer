@@ -10,7 +10,7 @@ public class Animal {
         private String favoriteFood;
         private String favoriteTime = "play";
         private int sleepingTime; // measured in min 1-10. Due this increase healthLevel and decrease hungryLevel
-        HappyTime favoriteHappyTime;
+        Activity favoriteHappyTime;
 
 
 
@@ -21,7 +21,7 @@ public class Animal {
                 } else if ( 4 < spiritLevel && spiritLevel <= 6){
                         System.out.println("Your animal is ok.");
 
-                } else if ( spiritLevel > 6) {
+                } else if ( 6 < spiritLevel) {
                         System.out.println("Your animal is happy");
                 }
 

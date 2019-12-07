@@ -1,8 +1,5 @@
 package org.fasttrackit;
 
-import org.jetbrains.annotations.NotNull;
-
-
 
 public class Rescuer {
 
@@ -38,7 +35,7 @@ public void feedAnimal(Food food, Animal animal){
     }
 }
 
-public void walk(HappyTime time, Animal animal){
+public void walk(Activity time, Animal animal){
 
     if (time.getName().equals(animal.getFavoriteTime())) {
         System.out.println(getName() + " just " + time.getName() + " with "+animal.getName());

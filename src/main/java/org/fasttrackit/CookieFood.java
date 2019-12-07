@@ -12,4 +12,5 @@ public class CookieFood extends Food {
     public static void setCookie(String cookie) {
         CookieFood.cookie = cookie;
     }
+
 }

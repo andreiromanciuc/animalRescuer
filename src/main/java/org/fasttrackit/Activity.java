@@ -1,6 +1,6 @@
 package org.fasttrackit;
 
-public class HappyTime {
+public class Activity {
     private String type; // if it's preferred happy time, the spiritLevel will increase more
     private String name; //playing with adaptor, walking, playing toy (different type of toys)
     private int duration; // if user will select one of the happyTimeType, it will have different
