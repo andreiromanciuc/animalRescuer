@@ -11,13 +11,14 @@ public class Game {
     private Activity[] availableActivities = new Activity[3];
 
     public void start(){
-        initFood();
-        initActivities();
-        displayFood();
-        displayActivities();
+        selectAnimal();
+//        initFood();
+//        initActivities();
+//        displayFood();
+//        displayActivities();
     }
 
-    public void selectAnimal() {
+    private void selectAnimal() {
         System.out.println("Which type of animal do you prefer?(Please enter the number)");
         System.out.println("1. Dog");
         System.out.println("2. Cat");
@@ -27,12 +28,24 @@ public class Game {
         int i = scanner.nextInt();
 
         if (i == 1) {
-            System.out.println("Your animal is a Dog");
+            Scanner dogScanner = new Scanner(System.in);
+            System.out.println("Which is the name for you pet?");
+            dog.setName(dogScanner.nextLine());
+            System.out.println("Your animal is a Dog, named: "+dog.getName());
             dog.setFavoriteFood(CookieFood.getCookie());
+            dog.setSpiritLevel(2);
+            dog.setHealthLevel(3);
+            dog.setHungryLevel(2);
 
         } else if (i == 2) {
-            System.out.println("Your animal is a Cat");
+            Scanner catScanner = new Scanner(System.in);
+            System.out.println("Which is the name for you pet?");
+            cat.setName(catScanner.nextLine());
+            System.out.println("Your animal is a Cat, named: "+cat.getName());
             cat.setFavoriteFood(CookieFood.getCookie());
+            cat.setSpiritLevel(3);
+            cat.setHealthLevel(3);
+            cat.setHungryLevel(1);
         } else{
             System.out.println("Please insert the number from the range");
             selectAnimal();}
