@@ -8,6 +8,8 @@ public class Dog extends Animal {
         System.out.println(getName() + " wags his tail.");
     }
 
+
+
     public Dog(String name) {
         super(name);
     }

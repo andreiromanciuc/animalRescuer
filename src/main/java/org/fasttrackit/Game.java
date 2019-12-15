@@ -3,6 +3,7 @@ package org.fasttrackit;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Game {
 
@@ -15,7 +16,32 @@ public class Game {
         displayFood();
         displayActivities();
     }
-    private void initFood() {
+
+    public void selectAnimal() {
+        System.out.println("Which type of animal do you prefer?(Please enter the number)");
+        System.out.println("1. Dog");
+        System.out.println("2. Cat");
+        Dog dog = new Dog();
+        Cat cat = new Cat();
+        Scanner scanner = new Scanner(System.in);
+        int i = scanner.nextInt();
+
+        if (i == 1) {
+            System.out.println("Your animal is a Dog");
+            dog.setFavoriteFood(CookieFood.getCookie());
+
+        } else if (i == 2) {
+            System.out.println("Your animal is a Cat");
+            cat.setFavoriteFood(CookieFood.getCookie());
+        } else{
+            System.out.println("Please insert the number from the range");
+            selectAnimal();}
+
+    }
+
+
+
+        private void initFood() {
         Food food1 = new Food();
         food1.setName("Meat");
         food1.setType("normal");

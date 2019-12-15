@@ -10,7 +10,7 @@ public class App
     {
 
         Game game = new Game();
-        game.start();
+        game.selectAnimal();
 //        Animal animal = new Animal("Rex");
 //        Rescuer adaptor = new Rescuer("Andrei", 29);
 //
