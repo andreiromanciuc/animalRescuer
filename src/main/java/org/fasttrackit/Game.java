@@ -6,13 +6,15 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Game {
 
-    private List<Food> availableFood = new ArrayList<Food>();
+    private List<Food> availableFoods = new ArrayList<Food>();
     private Activity[] availableActivities = new Activity[3];
 
     public void start() throws Exception {
         System.out.println("Hello! Welcome to our game.");
-        initRescuer();
+//        initRescuer();
 //        initAnimal();
+//        requireFeeding();
+            requireActivity();
 
     }
 
@@ -74,6 +76,20 @@ public class Game {
 
     }
 
+    private void requireFeeding(){
+        System.out.println("Let's start to feed your pet");
+        System.out.println("Please select the food");
+        System.out.println("Available foods:");
+        for (int i = 0; i<availableFoods.size(); i++){
+            System.out.println((i+1)+". "+ availableFoods.get(i).getName());
+        }
+
+    }
+
+    private void requireActivity(){
+        displayActivities();
+    }
+
 
     private void initFood() {
         Food food1 = new Food();
@@ -82,7 +98,7 @@ public class Game {
         food1.setPrice(10);
         food1.setQuantity(2);
         food1.setStockFood(0);
-        availableFood.add(food1);
+        availableFoods.add(food1);
 
         Food food2 = new Food();
         food2.setName("Pedigree");
@@ -90,7 +106,7 @@ public class Game {
         food2.setPrice(5);
         food2.setQuantity(5);
         food2.setStockFood(3);
-        availableFood.add(food2);
+        availableFoods.add(food2);
 
         Food cookieFood = new CookieFood();
         cookieFood.setName("cookie");
@@ -98,7 +114,7 @@ public class Game {
         cookieFood.setPrice(7);
         cookieFood.setQuantity(5);
         cookieFood.setStockFood(2);
-        availableFood.add(cookieFood);
+        availableFoods.add(cookieFood);
 
     }
 
@@ -117,14 +133,7 @@ public class Game {
 
     }
 
-    public void displayFood() {
-        System.out.println("Available foods: ");
 
-        for (int i = 0; i < availableFood.size(); i++) {
-            System.out.println((i + 1) + ". " + availableFood.get(i).getName());
-        }
-
-    }
 
     public void displayActivities() {
         System.out.println("Available activities: ");
