@@ -1,24 +1,45 @@
 package org.fasttrackit;
 
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Game {
 
     private List<Food> availableFood = new ArrayList<Food>();
     private Activity[] availableActivities = new Activity[3];
 
-    public void start(){
-        selectAnimal();
-//        initFood();
-//        initActivities();
-//        displayFood();
-//        displayActivities();
+    public void start() throws Exception {
+        System.out.println("Hello! Welcome to our game.");
+        initRescuer();
+//        initAnimal();
+
     }
 
-    private void selectAnimal() {
+    private void initRescuer() throws Exception {
+        Rescuer rescuer = new Rescuer();
+        try {
+        Scanner scannerName = new Scanner(System.in);
+        Scanner scannerAge = new Scanner(System.in);
+        System.out.println("Please introduce your name.");
+        String name = scannerName.nextLine();
+        rescuer.setName(name);
+        System.out.println("Please introduce your age.");
+        int age = scannerAge.nextInt();
+        rescuer.setAge(age);}
+        catch (InputMismatchException exception){
+            System.out.println("Please introduce a valid number");
+            initRescuer();
+            System.out.println();
+        }
+        rescuer.setMoney(100);
+        System.out.println(rescuer.getName() + ". " + rescuer.getAge() + " years old.");
+        System.out.println("You starting the game with " + rescuer.getMoney() + "$");
+
+
+    }
+
+    private void initAnimal() {
         System.out.println("Which type of animal do you prefer?(Please enter the number)");
         System.out.println("1. Dog");
         System.out.println("2. Cat");
@@ -31,7 +52,7 @@ public class Game {
             Scanner dogScanner = new Scanner(System.in);
             System.out.println("Which is the name for you pet?");
             dog.setName(dogScanner.nextLine());
-            System.out.println("Your animal is a Dog, named: "+dog.getName());
+            System.out.println("Your animal is a Dog, named: " + dog.getName());
             dog.setFavoriteFood(CookieFood.getCookie());
             dog.setSpiritLevel(2);
             dog.setHealthLevel(3);
@@ -41,20 +62,20 @@ public class Game {
             Scanner catScanner = new Scanner(System.in);
             System.out.println("Which is the name for you pet?");
             cat.setName(catScanner.nextLine());
-            System.out.println("Your animal is a Cat, named: "+cat.getName());
+            System.out.println("Your animal is a Cat, named: " + cat.getName());
             cat.setFavoriteFood(CookieFood.getCookie());
             cat.setSpiritLevel(3);
             cat.setHealthLevel(3);
             cat.setHungryLevel(1);
-        } else{
+        } else {
             System.out.println("Please insert the number from the range");
-            selectAnimal();}
+            initAnimal();
+        }
 
     }
 
 
-
-        private void initFood() {
+    private void initFood() {
         Food food1 = new Food();
         food1.setName("Meat");
         food1.setType("normal");
@@ -80,7 +101,8 @@ public class Game {
         availableFood.add(cookieFood);
 
     }
-    private void initActivities(){
+
+    private void initActivities() {
         Activity activity1 = new Activity();
         activity1.setType("normal");
         activity1.setName("walk");
@@ -95,20 +117,21 @@ public class Game {
 
     }
 
-    public void displayFood(){
+    public void displayFood() {
         System.out.println("Available foods: ");
 
-        for (int i = 0; i < availableFood.size(); i++){
-            System.out.println((i+1)+". "+ availableFood.get(i).getName());
+        for (int i = 0; i < availableFood.size(); i++) {
+            System.out.println((i + 1) + ". " + availableFood.get(i).getName());
         }
 
     }
-    public void displayActivities(){
+
+    public void displayActivities() {
         System.out.println("Available activities: ");
 
-        for (int i =0; i < availableActivities.length; i++){
+        for (int i = 0; i < availableActivities.length; i++) {
             if (availableActivities[i] != null) {
-                System.out.println((i+1)+". "+ availableActivities[i].getName());
+                System.out.println((i + 1) + ". " + availableActivities[i].getName());
             }
         }
     }
