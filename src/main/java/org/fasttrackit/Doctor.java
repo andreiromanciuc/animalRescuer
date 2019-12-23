@@ -1,9 +1,9 @@
 package org.fasttrackit;
 
 public class Doctor {
-   private String name;
+   private String name = "Dr. Alex";
     private String specialization;
-    private String typeOfMedicine;
+    private String medicine;
     /* will be two types, pill and syringe. If the pill will be administrated to animal, his healthLevel will increase
     with 2 points, if syringe with 4 points, but will decrease spiritLevel
      */
@@ -35,11 +35,11 @@ public class Doctor {
         this.specialization = specialization;
     }
 
-    public String getTypeOfMedicine() {
-        return typeOfMedicine;
+    public String getMedicine() {
+        return medicine;
     }
 
-    public void setTypeOfMedicine(String typeOfMedicine) {
-        this.typeOfMedicine = typeOfMedicine;
+    public void setMedicine(String medicine) {
+        this.medicine = medicine;
     }
 }

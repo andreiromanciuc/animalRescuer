@@ -3,9 +3,9 @@ package org.fasttrackit;
 public class Animal {
         private String name;
         private int age;
-        private int healthLevel; // level 1 .. 10
-        private int hungryLevel; // level 1 .. 10
-        private int spiritLevel; // level 1 .. 10
+        private int healthLevel = 2; // level 1 .. 10
+        private int hungryLevel = 3; // level 1 .. 10
+        private int spiritLevel = 2; // level 1 .. 10
         private String color;
         private String favoriteFood;
         private String favoriteTime;
