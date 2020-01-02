@@ -5,6 +5,8 @@ import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Game {
+    Animal animal;
+    Food food;
 
     private List<Food> availableFoods = new ArrayList<Food>();
     private Activity[] availableActivities = new Activity[3];
@@ -16,8 +18,7 @@ public class Game {
         initAnimal();
         initFood();
         initActivities();
-        initProcess();
-        while (endGame){
+        while (!endGame){
             initProcess();
         }
     }
@@ -73,6 +74,7 @@ public class Game {
         }
 
     }
+
     private void initProcess(){
         System.out.println("How do you want to take care of your pet?");
         System.out.println("1. I want to feed him");
@@ -80,7 +82,8 @@ public class Game {
         System.out.println("3. I want to bring him to a doctor");
         Scanner scanner = new Scanner(System.in);
         int scan = scanner.nextInt();
-        Animal animal = new Animal();
+
+
         if (scan == 1){
             requireFeeding();
         }else if (scan == 2){
@@ -96,14 +99,14 @@ public class Game {
         }else {
             initProcess();
         }
+
     }
 
     private void requireFeeding() {
         System.out.println("Let's start to feed your pet");
         System.out.println("Please select the food");
         System.out.println("Available foods:");
-        Animal animal = new Animal();
-        Food food = new Food();
+
         for (int i = 0; i < availableFoods.size(); i++) {
             System.out.println((i + 1) + ". " + availableFoods.get(i).getName());
         }
@@ -112,7 +115,7 @@ public class Game {
         int scan = scanner.nextInt();
         if (scan == 1){
             System.out.println("You selected meat.");
-            animal.setHungryLevel(animal.getHungryLevel() + 3 );
+            animal.setHungryLevel(animal.getHungryLevel()+3);
         } else if (scan == 2 ){
             System.out.println("You selected pedigree");
             animal.setHungryLevel(animal.getHungryLevel() +2);
@@ -136,7 +139,6 @@ public class Game {
     private void requireActivity() {
         System.out.println("Let's start to make some activity with your pet");
         System.out.println("Please select the activity");
-        Animal animal = new Animal();
         System.out.println("Available activities: ");
         for (int i = 0; i < availableActivities.length; i++) {
             if (availableActivities[i] != null) {
@@ -170,6 +172,7 @@ public class Game {
     private void initDoctor(){
         System.out.println("Hello! My name is "+ Doctor.class.getName());
         System.out.println("Let's give some medicine to your pet");
+        animal.setHealthLevel(animal.getHealthLevel()+5);
         initProcess();
     }
 

@@ -27,11 +27,6 @@ public void feedAnimal(Food food, Animal animal){
         food.setStockCookie(food.getStockCookie()-1);
         System.out.println("Stock of cookies has decrease by one. Now it's: "+food.getStockCookie());
 
-    } else {
-
-        System.out.println(getName() + " just gave some " + food.getName() + " food to " + animal.getName());
-        animal.setHungryLevel(animal.getHungryLevel() - 1);
-        System.out.println("Hungry level decrease to: " + animal.getHungryLevel());
     }
 }
 
