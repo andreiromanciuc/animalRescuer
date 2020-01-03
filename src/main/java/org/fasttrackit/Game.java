@@ -2,16 +2,17 @@ package org.fasttrackit;
 
 
 import java.util.*;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class Game {
-    Animal animal;
-    Food food;
-    Rescuer rescuer;
+    Animal animal = new Animal();
+    Food food = new Food();
+    Rescuer rescuer = new Rescuer();
+    Doctor doctor = new Doctor();
 
-    private List<Food> availableFoods = new ArrayList<Food>();
+
+    private List<Food> availableFoods = new ArrayList<>();
     private Activity[] availableActivities = new Activity[3];
-    private boolean endGame;
+
 
     public void start() throws Exception {
         System.out.println("Hello! Welcome to our game.");
@@ -19,9 +20,8 @@ public class Game {
         initAnimal();
         initFood();
         initActivities();
-        while (!endGame){
-            initProcess();
-        }
+        finish();
+
     }
 
     private void initRescuer() throws Exception {
@@ -35,7 +35,7 @@ public class Game {
             System.out.println("Please introduce your age.");
             int age = scannerAge.nextInt();
             rescuer.setAge(age);
-        } catch (InputMismatchException exception) {
+        } catch (InputMismatchException e) {
             System.out.println("Please introduce a valid number");
             initRescuer();
             System.out.println();
@@ -83,9 +83,10 @@ public class Game {
         System.out.println("1. I want to feed him");
         System.out.println("2. I want to be with him");
         System.out.println("3. I want to bring him to a doctor");
+
+
         Scanner scanner = new Scanner(System.in);
         int scan = scanner.nextInt();
-
 
         if (scan == 1){
             requireFeeding();
@@ -93,17 +94,20 @@ public class Game {
             requireActivity();
         }else if (scan ==3){
             initDoctor();
-            animal.setHealthLevel(animal.getHealthLevel()+5);
         }else {
             System.out.println("Please introduce the numbers from the range");
+            initProcess();
         }
-        if (animal.getHungryLevel() == 10 && animal.getHealthLevel() == 10 && animal.getSpiritLevel()==10){
+    }
+
+    private void finish() {
+        if (animal.getHungryLevel() >= 10 && animal.getHealthLevel() >= 10 && animal.getSpiritLevel() >=10){
             System.out.println("Congratulations you saved your animal!!!");
         }else {
             initProcess();
         }
-
     }
+
 
     private void requireFeeding() {
         System.out.println("Let's start to feed your pet");
@@ -131,9 +135,9 @@ public class Game {
         }
         System.out.println("");
         System.out.println("After feeding, "+animal.getName()+" have values: ");
-        System.out.println(animal.getHungryLevel());
-        System.out.println(animal.getHealthLevel());
-        System.out.println(animal.getSpiritLevel());
+        System.out.println("Hungry level: " + animal.getHungryLevel());
+        System.out.println("Health level: " + animal.getHealthLevel());
+        System.out.println("Spirit level: " + animal.getSpiritLevel());
         System.out.println("");
         animal.highSpirit();
         initProcess();
@@ -166,18 +170,22 @@ public class Game {
         }
         System.out.println("");
         System.out.println("After activity "+animal.getName()+" have values: ");
-        System.out.println(animal.getHungryLevel());
-        System.out.println(animal.getHealthLevel());
-        System.out.println(animal.getSpiritLevel());
+        System.out.println("Hungry level: " + animal.getHungryLevel());
+        System.out.println("Health level: " + animal.getHealthLevel());
+        System.out.println("Spirit level: " + animal.getSpiritLevel());
         System.out.println("");
         animal.highSpirit();
         initProcess();
     }
 
     private void initDoctor(){
-        System.out.println("Hello! My name is "+ Doctor.class.getName());
+        doctor.setName("Dr. Alex");
+        System.out.println("Hello! My name is "+ doctor.getName() );
         System.out.println("Let's give some medicine to your pet");
         animal.setHealthLevel(animal.getHealthLevel()+5);
+        animal.setSpiritLevel(animal.getSpiritLevel()-2);
+        System.out.println("Health level of your pet is " + animal.getHealthLevel());
+        System.out.println("Spirit level of your pet is " + animal.getSpiritLevel());
         initProcess();
     }
 

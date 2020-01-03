@@ -1,7 +1,7 @@
 package org.fasttrackit;
 
 public class Doctor {
-   private String name = "Dr. Alex";
+    private String name;
     private String specialization;
     private String medicine;
     /* will be two types, pill and syringe. If the pill will be administrated to animal, his healthLevel will increase
@@ -12,12 +12,7 @@ public class Doctor {
 
     /* medicament administration will increase the health level of animal. The same var as at the
     animal level*/
-    int healthLevel;
 
-
-    public Doctor(String doctorName) {
-        this.name = doctorName;
-    }
 
     public String getName() {
         return name;
@@ -41,5 +36,13 @@ public class Doctor {
 
     public void setMedicine(String medicine) {
         this.medicine = medicine;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 }
