@@ -155,9 +155,11 @@ public class Game {
         if (scan == 1) {
             System.out.println("You going to " + availableActivities[0].getName() + " with " + animal.getName());
             animal.setSpiritLevel(animal.getSpiritLevel() + 2);
+            animal.setHungryLevel(animal.getHungryLevel()-1);
         } else if (scan == 2) {
             System.out.println("You going to " + availableActivities[1].getName() + " with " + animal.getName());
             animal.setSpiritLevel(animal.getSpiritLevel()+4);
+            animal.setHungryLevel(animal.getHungryLevel()-2);
         } else {
             System.out.println("Please select the activity from the range");
             requireActivity();
