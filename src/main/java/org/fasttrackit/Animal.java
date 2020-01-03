@@ -1,11 +1,13 @@
 package org.fasttrackit;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 public class Animal {
         private String name;
         private int age;
-        private int healthLevel = 2; // level 1 .. 10
-        private int hungryLevel = 3; // level 1 .. 10
-        private int spiritLevel = 2; // level 1 .. 10
+        private int healthLevel = ThreadLocalRandom.current().nextInt(1,5); // level 1 .. 10
+        private int hungryLevel = ThreadLocalRandom.current().nextInt(1,5); // level 1 .. 10
+        private int spiritLevel = ThreadLocalRandom.current().nextInt(1,5); // level 1 .. 10
         private String color;
         private String favoriteFood;
         private String favoriteTime;
@@ -15,13 +17,10 @@ public class Animal {
 
 
         public void highSpirit (){
-                if (spiritLevel <= 4){
+                if (spiritLevel <= 5){
                         System.out.println("Your animal isn't happy.");
 
-                } else if ( 4 < spiritLevel && spiritLevel <= 6){
-                        System.out.println("Your animal is ok.");
-
-                } else if ( 6 < spiritLevel) {
+                } else {
                         System.out.println("Your animal is happy");
                 }
 

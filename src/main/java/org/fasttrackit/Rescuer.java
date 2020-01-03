@@ -24,8 +24,8 @@ public void feedAnimal(Food food, Animal animal){
             animal.setSpiritLevel(10);
         }
         System.out.println("Spirit level has increase by one. Now it's: "+ animal.getSpiritLevel());
-        food.setStockCookie(food.getStockCookie()-1);
-        System.out.println("Stock of cookies has decrease by one. Now it's: "+food.getStockCookie());
+//        food.setStockCookie(food.getStockCookie()-1);
+//        System.out.println("Stock of cookies has decrease by one. Now it's: "+food.getStockCookie());
 
     }
 }

@@ -7,6 +7,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Game {
     Animal animal;
     Food food;
+    Rescuer rescuer;
 
     private List<Food> availableFoods = new ArrayList<Food>();
     private Activity[] availableActivities = new Activity[3];
@@ -47,6 +48,7 @@ public class Game {
     }
 
     private void initAnimal() {
+
         System.out.println("Which type of animal do you prefer?(Please enter the number)");
         System.out.println("1. Dog");
         System.out.println("2. Cat");
@@ -55,18 +57,19 @@ public class Game {
         Scanner scanner = new Scanner(System.in);
         int i = scanner.nextInt();
 
+
         if (i == 1) {
             Scanner dogScanner = new Scanner(System.in);
             System.out.println("Which is the name for you pet?");
             dog.setName(dogScanner.nextLine());
             System.out.println("Your animal is a Dog, named: " + dog.getName());
 
-
         } else if (i == 2) {
             Scanner catScanner = new Scanner(System.in);
             System.out.println("Which is the name for you pet?");
             cat.setName(catScanner.nextLine());
             System.out.println("Your animal is a Cat, named: " + cat.getName());
+
 
         } else {
             System.out.println("Please insert the number from the range");
@@ -118,10 +121,10 @@ public class Game {
             animal.setHungryLevel(animal.getHungryLevel()+3);
         } else if (scan == 2 ){
             System.out.println("You selected pedigree");
-            animal.setHungryLevel(animal.getHungryLevel() +2);
+            animal.setHungryLevel(animal.getHungryLevel()+2);
         }else if (scan == 3){
             System.out.println("You selected cookie");
-            animal.setSpiritLevel(animal.getSpiritLevel()+1);
+            rescuer.feedAnimal(food, animal);
         }else {
             System.out.println("Please select the numbers from the range");
             requireFeeding();
