@@ -18,31 +18,13 @@ public class Animal {
 
         public void highSpirit (){
                 if (spiritLevel <= 5){
-                        System.out.println("Your animal isn't happy.");
+                        System.out.println(name+ " isn't happy.");
 
                 } else {
-                        System.out.println("Your animal is happy");
+                        System.out.println(name+ " is happy");
                 }
 
         }
-
-
-        public String getFavoriteTime() {
-                return favoriteTime;
-        }
-
-        public void setFavoriteTime(String favoriteTime) {
-                this.favoriteTime = favoriteTime;
-        }
-
-        public Animal(String name) {
-                this.name = name;
-        }
-
-        public Animal() {
-                this.setName(name);
-        }
-
 
         public String getName() {
                 return name;
@@ -50,22 +32,6 @@ public class Animal {
 
         public void setName(String name) {
                 this.name = name;
-        }
-
-        public String getColor() {
-                return color;
-        }
-
-        public void setColor(String color) {
-                this.color = color;
-        }
-
-        public String getFavoriteFood() {
-                return favoriteFood;
-        }
-
-        public void setFavoriteFood(String favoriteFood) {
-                this.favoriteFood = favoriteFood;
         }
 
         public int getAge() {
@@ -100,6 +66,30 @@ public class Animal {
                 this.spiritLevel = spiritLevel;
         }
 
+        public String getColor() {
+                return color;
+        }
+
+        public void setColor(String color) {
+                this.color = color;
+        }
+
+        public String getFavoriteFood() {
+                return favoriteFood;
+        }
+
+        public void setFavoriteFood(String favoriteFood) {
+                this.favoriteFood = favoriteFood;
+        }
+
+        public String getFavoriteTime() {
+                return favoriteTime;
+        }
+
+        public void setFavoriteTime(String favoriteTime) {
+                this.favoriteTime = favoriteTime;
+        }
+
         public int getSleepingTime() {
                 return sleepingTime;
         }
@@ -107,6 +97,4 @@ public class Animal {
         public void setSleepingTime(int sleepingTime) {
                 this.sleepingTime = sleepingTime;
         }
-
-
 }
