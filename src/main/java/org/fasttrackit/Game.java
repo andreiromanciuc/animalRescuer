@@ -37,7 +37,7 @@ public class Game {
             System.out.println("Please introduce your age.");
             int age = scannerAge.nextInt();
             rescuer.setAge(age);
-        } catch (InputMismatchException e) {
+        } catch (Exception e) {
             System.out.println("Please introduce a valid number");
             initRescuer();
             System.out.println();
@@ -49,7 +49,7 @@ public class Game {
 
     }
 
-    private void initAnimal() {
+    private void initAnimal() throws Exception {
 
         System.out.println("Which type of animal do you prefer?(Please enter the number)");
         System.out.println("1. Dog");
@@ -60,27 +60,33 @@ public class Game {
         int i = scanner.nextInt();
 
 
-        if (i == 1) {
-            Scanner dogScanner = new Scanner(System.in);
-            System.out.println("Which is the name for you pet?");
-            animal.setName(dogScanner.nextLine());
-            System.out.println("Your animal is a Dog, named: " + animal.getName());
+        try {
+            if (i == 1) {
+                Scanner dogScanner = new Scanner(System.in);
+                System.out.println("Which is the name for you pet?");
+                animal.setName(dogScanner.nextLine());
+                System.out.println("Your animal is a Dog, named: " + animal.getName());
 
-        } else if (i == 2) {
-            Scanner catScanner = new Scanner(System.in);
-            System.out.println("Which is the name for you pet?");
-            animal.setName(catScanner.nextLine());
-            System.out.println("Your animal is a Cat, named: " + animal.getName());
+            } else if (i == 2) {
+                Scanner catScanner = new Scanner(System.in);
+                System.out.println("Which is the name for you pet?");
+                animal.setName(catScanner.nextLine());
+                System.out.println("Your animal is a Cat, named: " + animal.getName());
 
 
-        } else {
+            } else {
+                System.out.println("Please insert the number from the range");
+                initAnimal();
+            }
+        } catch (Exception e) {
             System.out.println("Please insert the number from the range");
             initAnimal();
+            System.out.println("");
         }
 
     }
 
-    private void initProcess() {
+    private void initProcess() throws Exception {
         System.out.println("Hungry level: "+animal.getHungryLevel());
         System.out.println("Spirit level: "+animal.getSpiritLevel());
         System.out.println("Health level: "+animal.getHealthLevel());
@@ -92,22 +98,28 @@ public class Game {
         System.out.println("3. I want to bring him to a doctor. (increase: +5 health level; decrease: -2 spirit level)");
 
 
-        Scanner scanner = new Scanner(System.in);
-        int scan = scanner.nextInt();
+        try {
+            Scanner scanner = new Scanner(System.in);
+            int scan = scanner.nextInt();
 
-        if (scan == 1) {
-            requireFeeding();
-        } else if (scan == 2) {
-            requireActivity();
-        } else if (scan == 3) {
-            initDoctor();
-        } else {
+            if (scan == 1) {
+                requireFeeding();
+            } else if (scan == 2) {
+                requireActivity();
+            } else if (scan == 3) {
+                initDoctor();
+            } else {
+                System.out.println("Please introduce the numbers from the range");
+                initProcess();
+            }
+        } catch (Exception e) {
             System.out.println("Please introduce the numbers from the range");
             initProcess();
+            System.out.println("");
         }
     }
 
-    private void finish() {
+    private void finish() throws Exception {
         if (animal.getHungryLevel() >= 10 && animal.getHealthLevel() >= 10 && animal.getSpiritLevel() >= 10) {
             System.out.println("");
             System.out.println("Congratulations you saved "+animal.getName()+"!");
@@ -129,7 +141,7 @@ public class Game {
         }
     }
 
-    private void requireFeeding() {
+    private void requireFeeding() throws Exception {
         System.out.println("Let's start to feed your pet");
         System.out.println("Please select the food");
         System.out.println("Available foods:");
@@ -138,36 +150,42 @@ public class Game {
             System.out.println((i + 1) + ". " + availableFoods.get(i).getName());
         }
 
-        Scanner scanner = new Scanner(System.in);
-        int scan = scanner.nextInt();
+        try {
+            Scanner scanner = new Scanner(System.in);
+            int scan = scanner.nextInt();
 
-        if (animal.getHungryLevel() >= 10) {
-            System.out.println(animal.getName() + " are not hungry, also spirit level has not increase.");
-            animal.setHungryLevel(10);
-            animal.setSpiritLevel(animal.getSpiritLevel() - 1);
-            finish();
-        } else if (scan == 1) {
-            System.out.println("You selected meat.");
-            animal.setHungryLevel(animal.getHungryLevel() + 4);
+            if (animal.getHungryLevel() >= 10) {
+                System.out.println(animal.getName() + " are not hungry, also spirit level has not increase.");
+                animal.setHungryLevel(10);
+                animal.setSpiritLevel(animal.getSpiritLevel() - 1);
+                finish();
+            } else if (scan == 1) {
+                System.out.println("You selected meat.");
+                animal.setHungryLevel(animal.getHungryLevel() + 4);
 
-        } else if (scan == 2) {
-            System.out.println("You selected pedigree");
-            animal.setHungryLevel(animal.getHungryLevel() + 3);
-            animal.setSpiritLevel(animal.getSpiritLevel()-1);
+            } else if (scan == 2) {
+                System.out.println("You selected pedigree");
+                animal.setHungryLevel(animal.getHungryLevel() + 3);
+                animal.setSpiritLevel(animal.getSpiritLevel()-1);
 
-        } else if (scan == 3) {
-            System.out.println("You selected cookie");
+            } else if (scan == 3) {
+                System.out.println("You selected cookie");
 
-            animal.setSpiritLevel(animal.getSpiritLevel() + 2);
-            animal.setHungryLevel(animal.getHungryLevel() + 1);
-        } else {
+                animal.setSpiritLevel(animal.getSpiritLevel() + 2);
+                animal.setHungryLevel(animal.getHungryLevel() + 1);
+            } else {
+                System.out.println("Please select the numbers from the range");
+                requireFeeding();
+            }
+        } catch (Exception e) {
             System.out.println("Please select the numbers from the range");
             requireFeeding();
+            System.out.println("");
         }
         finish();
     }
 
-    private void requireActivity() {
+    private void requireActivity() throws Exception {
         System.out.println("Let's start to make some activity with your pet");
         System.out.println("Please select the activity");
         System.out.println("Available activities: ");
@@ -177,31 +195,37 @@ public class Game {
             }
         }
 
-        Scanner scanner = new Scanner(System.in);
-        int scan = scanner.nextInt();
+        try {
+            Scanner scanner = new Scanner(System.in);
+            int scan = scanner.nextInt();
 
-        if (animal.getSpiritLevel() >= 10) {
+            if (animal.getSpiritLevel() >= 10) {
 
-            animal.highSpirit();
+                animal.highSpirit();
 
-            finish();
-        } else if (scan == 1) {
-            System.out.println("You going to " + availableActivities[0].getName() + " with " + animal.getName());
-            animal.setSpiritLevel(animal.getSpiritLevel() + 2);
-            animal.setHungryLevel(animal.getHungryLevel() - 1);
-        } else if (scan == 2) {
-            System.out.println("You going to " + availableActivities[1].getName() + " with " + animal.getName());
-            animal.setSpiritLevel(animal.getSpiritLevel() + 4);
-            animal.setHungryLevel(animal.getHungryLevel() - 2);
-        } else {
+                finish();
+            } else if (scan == 1) {
+                System.out.println("You going to " + availableActivities[0].getName() + " with " + animal.getName());
+                animal.setSpiritLevel(animal.getSpiritLevel() + 2);
+                animal.setHungryLevel(animal.getHungryLevel() - 1);
+            } else if (scan == 2) {
+                System.out.println("You going to " + availableActivities[1].getName() + " with " + animal.getName());
+                animal.setSpiritLevel(animal.getSpiritLevel() + 4);
+                animal.setHungryLevel(animal.getHungryLevel() - 2);
+            } else {
+                System.out.println("Please select the activity from the range");
+                requireActivity();
+            }
+        } catch (Exception e) {
             System.out.println("Please select the activity from the range");
             requireActivity();
+            System.out.println("");
         }
 
         finish();
     }
 
-    private void initDoctor() {
+    private void initDoctor() throws Exception {
         doctor.setName("Dr. Alex");
         System.out.println("Hello! My name is " + doctor.getName());
         if (animal.getHealthLevel() >= 10) {
